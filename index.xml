@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>peat dot org</title>
+    <link>https://peat.org/</link>
+    <description>Recent content on peat dot org</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Apr 2023 13:56:45 -0700</lastBuildDate><atom:link href="https://peat.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First</title>
+      <link>https://peat.org/posts/first/</link>
+      <pubDate>Thu, 13 Apr 2023 13:56:45 -0700</pubDate>
+      
+      <guid>https://peat.org/posts/first/</guid>
+      <description>Hello, world! </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://peat.org/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://peat.org/about/</guid>
+      <description>Oi, what&amp;rsquo;s the noise? </description>
+    </item>
+    
+  </channel>
+</rss>

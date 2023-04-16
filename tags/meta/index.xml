@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>👋 Hello! on peat dot org</title>
-    <link>https://peat.org/</link>
-    <description>Recent content in 👋 Hello! on peat dot org</description>
+    <title>meta on peat dot org</title>
+    <link>https://peat.org/tags/meta/</link>
+    <description>Recent content in meta on peat dot org</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Apr 2023 13:56:45 -0700</lastBuildDate><atom:link href="https://peat.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Apr 2023 13:56:45 -0700</lastBuildDate><atom:link href="https://peat.org/tags/meta/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>I Should Start a Blog</title>
       <link>https://peat.org/posts/hello-again/</link>

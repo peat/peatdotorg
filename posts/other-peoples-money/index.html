@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJ4Z2F0C3C"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-NJ4Z2F0C3C");
+    </script>
+
+    <link rel="apple-touch-icon" sizes="76x76" href="/ico/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/ico/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/ico/favicon-16x16.png" />
+    <link rel="manifest" href="/ico/site.webmanifest" />
+    <link rel="mask-icon" href="/ico/safari-pinned-tab.svg" color="#5bbad5" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> peat dot org - Other People&#39;s Money </title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="font-sans flex flex-col bg-zinc-50 px-5">
+    <header class="max-w-4xl mx-auto w-full">
+      <nav class="flex flex-row text-sm">
+        <ul class="flex-initial">
+          <li><a class="font-bold" href="/">peat dot org</a></li>
+          
+          <li><a href="/posts/">posts</a></li>
+          
+        </ul>
+        <div class="grow"></div>
+        <ul class="flex-initial">
+          <li><a rel="me" href="https://twitter.com/peat">twitter</a></li>
+          <li><a rel="me" href="https://mastodon.social/@peat">mastodon</a></li>
+          <li><a rel="me" href="https://github.com/peat">github</a></li>
+          <li><a rel="me" href="https://gitlab.com/peat">gitlab</a></li>
+          <li><a rel="me" href="https://linkedin.com/in/peatbakke">linkedin</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="max-w-4xl mx-auto w-full" id="content">
+      <div class="bg-white py-5 px-10 border rounded-lg border-zinc-100 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5">
+
+
+<img class="mb-10 mt-5 p-2 shadow-xl -rotate-1 border" src="/images/banknote-costa-rica-obverse.jpg">
+
+        
+
+<h1 class="text-zinc-700 text-4xl drop-shadow-lg font-bold mt-8 mb-2">Other People&#39;s Money</h1>
+<h2 class="text-sm mb-8 italic">
+  <ul>
+    <li class="inline pr-2 text-zinc-700">April 22, 2023</li>
+    
+    <li class="inline px-1 text-blue-600"><a href="/tags/banknotes">#banknotes</a></li>
+    
+    <li class="inline px-1 text-blue-600"><a href="/tags/databases">#databases</a></li>
+    
+  </ul>
+</h2>
+
+<div id="single-content">
+<p>I was in third grade when I saw international currency for the first time. I hadn&rsquo;t considered that
+money from other places might be different than the US Dollar, and it was a delightful shock when my
+mom showed me a French banknote. The style! The color! It was gorgeous.</p>
+<p>Check out the Costa Rican money above. The design is wonderful, the printing intricate
+and precise. More details emerge the closer you look &ndash; check out the multicolored fibers in the paper
+to prevent counterfeiting!</p>
+<p>I started collecting banknotes about fifteen years ago, focusing on defunct international currencies
+and hyperinflationary money. I now have well over a thousand notes from &hellip; a lot of countries? I&rsquo;m
+not sure.</p>
+<p>I need to build a catalog to figure that out.</p>
+<p>Let&rsquo;s build one!</p>
+<h2 id="breaking-down-a-banknote">Breaking Down a Banknote</h2>
+<p>Banknotes seem pretty simple. Why would I need a fancy database to track a piece of paper
+from a particular country with a particular value?</p>
+<p>Let&rsquo;s get into it.</p>
+<p>&ldquo;Countries&rdquo; are complicated. Banknotes have been issued by cities, states, and regional authorities.
+Countries come and go, governments rise and fall. I don&rsquo;t want to recreate a taxonomy of geopolitical and
+economic boundaries &ndash; but I do want to capture the gist of what region and era a banknote is from. To
+keep it simple, let&rsquo;s say a banknote is from a &ldquo;region&rdquo; that has a name and some other metadata to
+help us distinguish it.</p>
+<p>Identifying the region isn&rsquo;t easy. It&rsquo;s simple enough for me to search for latin characters,
+but I have no idea what to do with <strong>འབྲུག་རྒྱལ་ཁབ</strong> or <strong>ኢትዮጵያ</strong> or <strong>Монгол Улс</strong>.
+I need a way to visually identify regions, so storing their names is also important.</p>
+<p>(Those are Bhutanese, Ethiopian, and Cryllic alphabets if you were curious)</p>
+<p>Zooming out a little &ndash; let&rsquo;s get into the details and use the Costa Rican banknote below, and identify
+some of the things worth tracking &hellip;</p>
+<p><img src="/images/banknote-costa-rica-obverse.jpg" alt="Costa Rica Obverse"></p>
+<p>The front of the bill contains a lot of info  &ndash;</p>
+<ul>
+<li>The name of the issuing bank (Banco Central de Costa Rica).</li>
+<li>A portrait of Rafael Yglesias Castro and some neat flowers.</li>
+<li>The denomination (five) and the currency (Colones).</li>
+<li>The serial number (D56946137) and printing series (D).</li>
+<li>A date (October 4, 1989) and some text (Acuerdo de junta directiva No 4).</li>
+<li>A couple of signatures.</li>
+</ul>
+<p><img src="/images/banknote-costa-rica-reverse.jpg" alt="Costa Rica Reverse"></p>
+<p>The reverse also has some interesting parts &ndash;</p>
+<ul>
+<li>A scene of bustling commerce titled &ldquo;Alegoria. Teatro Nacional. J. Villa 1897&rdquo;</li>
+<li>The bank name, currency, and denomination again</li>
+<li>The name of the company that printed the banknote (Thomas De La Rue &amp; Company Limited)</li>
+</ul>
+<p>There&rsquo;s also some security features that are hard to pick out, notably multicolored fibers embedded
+in the paper.</p>
+<h2 id="modeling">Modeling</h2>
+<p>Taking all of the above into account makes for a somewhat complex set of relationships. The entity
+relationship diagram below also handles a few additional banknote features &ndash;
+like overprints, security features, currency issuance dates, and condition.</p>
+<div class="mermaid">
+erDiagram
+    BANKNOTE }o--|| MASTER : "instance of"
+    BANKNOTE {
+        string serial
+        string notes
+    }
+    MASTER }o--|| CURRENCY : "belongs to"
+    MASTER {
+        int denomination
+        string obverse
+        string reverse
+        date printed_on
+    }
+    MASTER }o--o| CURRENCY : overprint
+    CURRENCY {
+        string name
+        string symbol
+        string issued_on
+        string withdrawn_on
+        string lapsed_on
+    }
+    CURRENCY }o--|| AUTHORITY : "belongs to"
+    AUTHORITY {
+        string name
+    }
+    AUTHORITY }o--|| REGION : "belongs to"
+    REGION {
+        string name
+        string localized_name
+    }
+    BANKNOTE }o--o{ BANKNOTE-FEATURE : "has many"
+    BANKNOTE-FEATURE {
+        string name
+    }
+    MASTER }o--o{ MASTER-FEATURE : "has many"
+    MASTER-FEATURE {
+        string name
+    }
+    BANKNOTE }o--o| GRADE : "may have"
+    GRADE {
+        string name
+        string description
+    }
+    MASTER }o--o| PRINTER : "may have"
+    PRINTER {
+        string name
+    }
+    MASTER }o--o| MATERIAL : "may have"
+    MATERIAL {
+        string name
+    }
+    PRINTER }o--o| REGION : "may have"
+</div>
+
+<h2 id="building">Building</h2>
+<p>Building the catalog took a couple of evenings, and it&rsquo;s open source if you&rsquo;re interested in using
+and/or hacking on it.</p>
+<p><a href="https://github.com/peat/notesuite">https://github.com/peat/notesuite</a></p>
+<p>I added a couple of my favorite high denomination banknotes to test it out, including the Hungarian
+Egymilliard Billionen Pengo &ndash; that&rsquo;s a hundred million trillion Pengo! 100,000,000,000,000,000,000! 10e20!
+That&rsquo;s a lot of Pengos. It was printed at the end of Hungary&rsquo;s hyperinflation period in the 1940s,
+and is the largest denomination bill ever made.</p>
+<p><img src="/images/notesuite.png" alt="Notesuite"></p>
+<p>We&rsquo;ll nerd out on this later.</p>
+<p>In the meantime, I&rsquo;m always happy to get questions, feedback, and pull requests. Cheers!</p>
+
+</div>
+
+
+  <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  var config = {
+    startOnLoad: true,
+    theme:'light',
+    align:'center',
+  };
+  mermaid.initialize(config);
+</script>
+
+
+
+</div>
+    </div>
+    <footer class="flex flex-col max-w-4xl mx-auto w-full text-center text-sm w-full my-5 text-zinc-500">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+        all original content licensed as creative commons - attribution,
+        non-commercial
+      </a>
+      <p>copyright &copy; 2023 peat bakke</p>
+    </footer>
+  </body>
+</html>

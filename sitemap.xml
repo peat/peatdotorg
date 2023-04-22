@@ -3,18 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://peat.org/</loc>
-    <lastmod>2023-04-15T13:56:45-07:00</lastmod>
+    <lastmod>2023-04-22T08:32:31-07:00</lastmod>
+  </url><url>
+    <loc>https://peat.org/tags/banknotes/</loc>
+    <lastmod>2023-04-22T08:32:31-07:00</lastmod>
+  </url><url>
+    <loc>https://peat.org/tags/databases/</loc>
+    <lastmod>2023-04-22T08:32:31-07:00</lastmod>
+  </url><url>
+    <loc>https://peat.org/posts/other-peoples-money/</loc>
+    <lastmod>2023-04-22T08:32:31-07:00</lastmod>
+  </url><url>
+    <loc>https://peat.org/posts/</loc>
+    <lastmod>2023-04-22T08:32:31-07:00</lastmod>
+  </url><url>
+    <loc>https://peat.org/tags/</loc>
+    <lastmod>2023-04-22T08:32:31-07:00</lastmod>
   </url><url>
     <loc>https://peat.org/posts/hello-again/</loc>
     <lastmod>2023-04-15T13:56:45-07:00</lastmod>
   </url><url>
     <loc>https://peat.org/tags/meta/</loc>
-    <lastmod>2023-04-15T13:56:45-07:00</lastmod>
-  </url><url>
-    <loc>https://peat.org/posts/</loc>
-    <lastmod>2023-04-15T13:56:45-07:00</lastmod>
-  </url><url>
-    <loc>https://peat.org/tags/</loc>
     <lastmod>2023-04-15T13:56:45-07:00</lastmod>
   </url>
 </urlset>

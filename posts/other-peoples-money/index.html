@@ -75,21 +75,10 @@ and hyperinflationary money. I now have well over a thousand notes from &hellip;
 not sure.</p>
 <p>I need to build a catalog to figure that out.</p>
 <p>Let&rsquo;s build one!</p>
-<h2 id="breaking-down-a-banknote">Breaking Down a Banknote</h2>
+<h2 id="whats-in-a-banknote">What&rsquo;s in a Banknote?</h2>
 <p>Banknotes seem pretty simple. Why would I need a fancy database to track a piece of paper
 from a particular country with a particular value?</p>
 <p>Let&rsquo;s get into it.</p>
-<p>&ldquo;Countries&rdquo; are complicated. Banknotes have been issued by cities, states, and regional authorities.
-Countries come and go, governments rise and fall. I don&rsquo;t want to recreate a taxonomy of geopolitical and
-economic boundaries &ndash; but I do want to capture the gist of what region and era a banknote is from. To
-keep it simple, let&rsquo;s say a banknote is from a &ldquo;region&rdquo; that has a name and some other metadata to
-help us distinguish it.</p>
-<p>Identifying the region isn&rsquo;t easy. It&rsquo;s simple enough for me to search for latin characters,
-but I have no idea what to do with <strong>འབྲུག་རྒྱལ་ཁབ</strong> or <strong>ኢትዮጵያ</strong> or <strong>Монгол Улс</strong>.
-I need a way to visually identify regions, so storing their names is also important.</p>
-<p>(Those are Bhutanese, Ethiopian, and Cryllic alphabets if you were curious)</p>
-<p>Zooming out a little &ndash; let&rsquo;s get into the details and use the Costa Rican banknote below, and identify
-some of the things worth tracking &hellip;</p>
 <p><img src="/images/banknote-costa-rica-obverse.jpg" alt="Costa Rica Obverse"></p>
 <p>The front of the bill contains a lot of info  &ndash;</p>
 <ul>
@@ -107,12 +96,34 @@ some of the things worth tracking &hellip;</p>
 <li>The bank name, currency, and denomination again</li>
 <li>The name of the company that printed the banknote (Thomas De La Rue &amp; Company Limited)</li>
 </ul>
-<p>There&rsquo;s also some security features that are hard to pick out, notably multicolored fibers embedded
-in the paper.</p>
-<h2 id="modeling">Modeling</h2>
-<p>Taking all of the above into account makes for a somewhat complex set of relationships. The entity
-relationship diagram below also handles a few additional banknote features &ndash;
-like overprints, security features, currency issuance dates, and condition.</p>
+<p>Almost every data point above gets &hellip; complicated.</p>
+<p>For example, the very idea that a banknote is from a country.</p>
+<p>Banknotes have been issued by cities,
+states, and regional authorities. Countries come and go, governments rise and fall. I don&rsquo;t want to
+recreate a taxonomy of geopolitical and economic boundaries &ndash; but I do want to capture the gist of
+what region and era a banknote is from.</p>
+<p>To keep it simple, I&rsquo;m running with the idea of a &ldquo;region&rdquo; that has a name and some other metadata to
+help us distinguish it &ndash; like notable dates or other information from Wikipedia.</p>
+<p>Even so, identifying the region isn&rsquo;t always easy. It&rsquo;s simple enough for me to search for latin
+characters, but I have no idea what to do with <strong>འབྲུག་རྒྱལ་ཁབ</strong> or <strong>ኢትዮጵያ</strong> or <strong>Монгол Улс</strong>.
+I need a way to visually identify regions, so storing their names in the local language is also
+important.</p>
+<p>(Those are Bhutanese, Ethiopian, and Cryllic alphabets if you were curious)</p>
+<p>Making things a little more spicy are the security features in banknotes: watermarks, windows in
+polymer notes, mylar strips, holograms, color changing ink &hellip; modern banknotes are amazing pieces
+of tech.</p>
+<p>Serial numbers and grading throw off the model again. If I have more than one of those Costa Rican notes,
+I want to catalog their individual serial numbers and conditions. There are also variations between
+individual notes that impact the interest and value &ndash; cancellation marks, specimens, even counterfeits!</p>
+<p>Just to make things a little more spicy, there are banknotes that are <em>overprinted</em> &ndash; which means
+a bank took an existing banknote and stamped a new currency on the top of it! This is fairly common
+with hyperinflation banknotes, and another oddity that needs to be modeled.</p>
+<h2 id="modeling-the-beast">Modeling the Beast</h2>
+<p>Taking all of the above into account makes for a somewhat complex set of relationships. At the top of
+the model is an individual <code>Banknote</code>, and the bottom is the <code>Region</code> table. Everything in-between
+represents the complexities of modeling international currencies.</p>
+<p>I&rsquo;m sure I&rsquo;ve missed a few things, and I welcome feedback from folks who see opportunities
+to improve this schema!</p>
 <div class="mermaid">
 erDiagram
     BANKNOTE }o--|| MASTER : "instance of"

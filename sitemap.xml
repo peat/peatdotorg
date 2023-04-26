@@ -3,7 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://peat.org/</loc>
-    <lastmod>2023-04-22T08:32:31-07:00</lastmod>
+    <lastmod>2023-04-25T20:07:09-07:00</lastmod>
+  </url><url>
+    <loc>https://peat.org/tags/art/</loc>
+    <lastmod>2023-04-25T20:07:09-07:00</lastmod>
+  </url><url>
+    <loc>https://peat.org/posts/im-a-little-teapot/</loc>
+    <lastmod>2023-04-25T20:07:09-07:00</lastmod>
+  </url><url>
+    <loc>https://peat.org/posts/</loc>
+    <lastmod>2023-04-25T20:07:09-07:00</lastmod>
+  </url><url>
+    <loc>https://peat.org/tags/rust/</loc>
+    <lastmod>2023-04-25T20:07:09-07:00</lastmod>
+  </url><url>
+    <loc>https://peat.org/tags/</loc>
+    <lastmod>2023-04-25T20:07:09-07:00</lastmod>
+  </url><url>
+    <loc>https://peat.org/tags/teapot/</loc>
+    <lastmod>2023-04-25T20:07:09-07:00</lastmod>
   </url><url>
     <loc>https://peat.org/tags/banknotes/</loc>
     <lastmod>2023-04-22T08:32:31-07:00</lastmod>
@@ -12,12 +30,6 @@
     <lastmod>2023-04-22T08:32:31-07:00</lastmod>
   </url><url>
     <loc>https://peat.org/posts/other-peoples-money/</loc>
-    <lastmod>2023-04-22T08:32:31-07:00</lastmod>
-  </url><url>
-    <loc>https://peat.org/posts/</loc>
-    <lastmod>2023-04-22T08:32:31-07:00</lastmod>
-  </url><url>
-    <loc>https://peat.org/tags/</loc>
     <lastmod>2023-04-22T08:32:31-07:00</lastmod>
   </url><url>
     <loc>https://peat.org/posts/hello-again/</loc>
